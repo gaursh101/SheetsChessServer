@@ -4,4 +4,6 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello, World!"
+    with open("index.html", "r") as file:
+        content = file.read()
+    return content
